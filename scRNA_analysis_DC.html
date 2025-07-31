@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>scRNA-seq Retina Analysis</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    details {
+      margin-bottom: 20px;
+    }
+    summary {
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1.1em;
+    }
+    pre {
+      background: #f4f4f4;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+      white-space: pre-wrap;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>scRNA-seq Analysis of Retina: GSE153673</h1>
+  <h2>Sample: GSM4649096_mm_ret_M1_C57OS_filtered.h5</h2>
+
+  <p>This document provides a walkthrough of scRNA-seq preprocessing, quality control, and filtering steps applied to a mouse retina dataset using Seurat in R.</p>
+
+  <details>
+    <summary>📦 Package Setup and File Loading</summary>
+    <pre><code>
+getwd()
+
+library(Seurat)
+library(ggplot2)
+library(patchwork)
+BiocManager::install("rhdf5")
+library(rhdf5)
+
+if (!requireNamespace("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+BiocManager::install("rhdf5", force = TRUE)
+
+library(rhdf5)
+
+h5_file <- "GSM4649096_mm_ret_M1_C57OS_filtered.h5"
+scRNA <- Read10X_h5(h5_file)
+    </code></pre>
+  </details>
+
+  <details>
+    <summary>🧬 Previewing Gene and Barcode Data</summary>
+    <pre><code>
+# Read barcodes
+barcodes <- h5read(h5_file, "matrix/barcodes")
+head(barcodes, 5)
+
+# Read gene names
+features <- h5read(h5_file, "matrix/features/name")
+head(features, 5)
+
+# Read count values
+data_values <- h5read(h5_file, "matrix/data")
+head(data_values, 5)
+    </code></pre>
+  </details>
+
+  <details>
+    <summary>📉 Sparsity Check and Seurat Object Creation</summary>
+    <pre><code>
+# Check sparsity
+total.zeros <- sum(scRNA == 0)
+total.counts <- nrow(scRNA) * ncol(scRNA)
+(total.zeros / total.counts) * 100
+
+dim(scRNA)
+
+# Create Seurat object
+seuratObj <- CreateSeuratObject(counts = scRNA,
+                                min.cells = 3,
+                                min.features = 200)
+
+seuratObj@assays$RNA@layers$counts[1:5,1:5]
+
+# Clean up
+rm(total.counts)
+rm(total.zeros)
+    </code></pre>
+  </details>
+
+  <details>
+    <summary>🧪 Quality Control (QC) Metrics</summary>
+    <pre><code>
+# Metadata
+head(seuratObj@meta.data)
+
+# Mitochondrial gene percentage
+seuratObj$mito <- PercentageFeatureSet(seuratObj, pattern = "^mt-")
+head(seuratObj@meta.data)
+metaData <- as.data.frame(seuratObj@meta.data)
+
+# Total UMI counts per cell
+p1 <- ggplot(metaData, aes("", nCount_RNA)) +
+  geom_jitter(height = 0, width = 0.3, color = "lightblue") +
+  geom_violin(fill = "gray80", alpha = 0.5) +
+  scale_y_continuous(trans = "log2") +
+  labs(title = "Total UMI counts per cell") +
+  theme_classic()
+
+# Number of genes detected per cell
+p2 <- ggplot(metaData, aes("", nFeature_RNA)) +
+  geom_jitter(height = 0, width = 0.3, color = "lightblue") +
+  geom_violin(fill = "gray80", alpha = 0.5) +
+  scale_y_continuous(trans = "log2") +
+  labs(title = "Number of genes per cell") +
+  theme_classic()
+
+# Percentage of mitochondrial genes
+p3 <- ggplot(metaData, aes("", mito)) +
+  geom_jitter(height = 0, width = 0.3, color = "lightblue") +
+  geom_violin(fill = "gray80", alpha = 0.5) +
+  labs(title = "% of mitochondrial transcripts") +
+  theme_classic()
+
+# Combine plots
+p1 + p2 + p3 + plot_layout(nrow = 2)
+    </code></pre>
+
+    <p><strong>📊 QC Plots:</strong></p>
+    <img src="umi_counts_plot.png" alt="UMI Counts Plot">
+    <img src="genes_per_cell_plot.png" alt="Genes per Cell Plot">
+    <img src="mito_percent_plot.png" alt="Mitochondrial Content Plot">
+  </details>
+
+  <details>
+    <summary>🔍 Data Filtering</summary>
+    <pre><code>
+# Subset cells with ≤ 20% mitochondrial content
+seuratObj_filtered <- subset(seuratObj, subset = mito <= 20)
+    </code></pre>
+  </details>
+
+</body>
+</html>
+
+
