@@ -58,7 +58,7 @@ This process helped me gain experience in preprocessing, clustering, annotation,
   <img src="figures/Rplot04.png" alt="Proteomics-based deconvolution of EVs" width="55%">
 </p>
 <p align="center">
-  <em>Estimated cell-type contributions in retinal EV proteomics using SVR-based deconvolution. Control(Dim-reared retina (DR) and PD(Photo oxidative damage model)  Contributions are higher in Muller glia in PD samples </em>
+  <em>Estimated cell-type contributions in retinal EV proteomics using SVR-based deconvolution. Control(Dim-reared retina (DR) and PD(Photo oxidative damage model)  EV contributions are higher in Muller glia in PD samples </em>
 </p>
 
 ---
@@ -66,6 +66,9 @@ This process helped me gain experience in preprocessing, clustering, annotation,
 ## 🛠️ Skills & Tools  
 
 - R programming (Seurat, ggplot2, dplyr, SVR modeling)  
-- Single-cell RNA-seq preprocessing, clustering, and annotation  
+- Single-cell RNA-seq preprocessing, clustering, and annotation
+- Lignad recpetor interactions (Cell chat) (NicheNet)
+- Linux and Latex
+  
 
 
