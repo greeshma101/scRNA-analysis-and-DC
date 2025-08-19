@@ -21,8 +21,9 @@ As research becomes increasingly **omics data driven**, I’ve been particularly
 
 ## 🔬 Current Research Focus  
 
-My recent work focuses on understanding **retinal cell communication and degeneration in glaucoma**, through analysis of **transcriptomic and proteomic** data.
+My recent work focuses on understanding **retinal cell extracellular vesicles (EV) communication and degeneration in glaucoma**, through analysis of **transcriptomic and proteomic** data.
 
+EVs are critical mediators of cell-to-cell communication, transferring proteins, lipids, and nucleic acids that modulate physiological and pathological processes in recipient cells
 ---
 
 ## 🧬 Highlights of My Work
@@ -48,7 +49,7 @@ This process helped me gain experience in preprocessing, clustering, annotation,
 
 - Constructed a reference matrix from single-cell transcriptomic data  
 - Adapted **support vector regression (SVR)**-based deconvolution (inspired by [Newman et al., 2015](https://doi.org/10.1038/nmeth.3337))  
-- Applied this to **extracellular vesicle (EV) proteomics** to estimate contributions of retinal cell types from[Cioanca et al.,2023](https://doi.org/10.1002/jev2.12393)
+- Applied this to **EV proteomics** to estimate contributions of retinal cell types from[Cioanca et al.,2023](https://doi.org/10.1002/jev2.12393)
 - This approach offers a computational strategy for characterizing the cellular origin of EVs, which are otherwise difficult to isolate by cell type experimentally
 
 ### 📊 Estimated Cell Type Contributions in EV Proteomics
