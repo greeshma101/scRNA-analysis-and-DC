@@ -27,7 +27,7 @@ My recent work focuses on understanding **retinal cell communication and degener
 
 ## 🧬 Highlights of My Work
 
-### 1. **Single-cell RNA-seq (scRNA-seq) Analysis**
+### 1. **Single-cell RNA-seq (scRNA-seq) Analysis of mouse retina**
 
 I re-analyzed retinal single-cell transcriptomic datasets, including one from [Fadl et al., 2020](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE153674), using 10X Genomics data.  
 This process helped me gain experience in preprocessing, clustering, annotation, and visualization using **Seurat**.
