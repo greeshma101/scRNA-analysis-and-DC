@@ -66,16 +66,5 @@ This process helped me gain experience in preprocessing, clustering, annotation,
 
 - R programming (Seurat, ggplot2, dplyr, SVR modeling)  
 - Single-cell RNA-seq preprocessing, clustering, and annotation  
-- Data visualization and QC interpretation  
-- Adapting transcriptomic workflows to proteomic data  
-- Clear and reproducible reporting of results  
 
----
-
-## 📫 Connect with Me  
-
-I'm open to collaboration or conversation around bioinformatics workflows, omics integration, or research in neurodegeneration.  
-Feel free to connect with me on [LinkedIn](https://www.linkedin.com) or reach out via email.
-
----
 
