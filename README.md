@@ -1,43 +1,83 @@
-# 👋 Hi, I'm Greeshma Gopinath  
+# 👋 Hi, I'm Greeshma Gopinath
 
-🎓 Aspiring PhD researcher in **bioinformatics and neurodegeneration**  
-🔬 Researching **cell-to-cell communication in glaucoma** through **scRNA-seq & proteomics**  
-🌱 Passionate about integrating **statistics, omics data, and biology** to uncover molecular mechanisms of disease  
+🎓 Aspiring PhD researcher in **bioinformatics,molecualar biology and omics**  
+🔬 Currently Investigating **cell-to-cell communication in glaucoma** using **scRNA-seq and proteomics**  
 
 ---
 
 ## 📘 My Research Journey  
 
-I began my scientific journey with a strong **statistical background** during my Master’s degree.  
-Through coursework in **RStudio**, I learned methods such as:  
+My academic background began with a strong foundation in **statistics**, developed during my Master’s degree in biology.  
+Through coursework and hands-on practice using **RStudio**, I became expereinced in:
 - Principal Component Analysis (PCA)  
 - Mixed linear models  
-- Regression approaches  
+- Regression techniques  
 
-This gave me a quantitative foundation and became a **stepping stone into bioinformatics**.  
+This experience helped me realize just how deep statistical methods run in biology,and how critical they are for navigating its complexity and variability in some biological aspects.
 
-As biology has become increasingly **data-driven and omics-focused**, I grew fascinated by the idea that understanding molecular mechanisms begins at the **cellular level**. That curiosity drove me to teach myself new computational methods and dive deeper into large-scale biological data analysis.  
+As research becomes increasingly **omics data driven**, I’ve been particularly motivated by the potential of high-throughput datasets to reveal cellular-level mechanisms. This has driven me to independently explore and apply computational workflows to publicly available biological datasets.
 
 ---
 
 ## 🔬 Current Research Focus  
 
-My research centers on understanding **how retinal cells communicate and degenerate in glaucoma**.  
+My recent work focuses on understanding **retinal cell communication and degeneration in glaucoma**, through analysis of **transcriptomic and proteomic** data.
 
+---
 
+## 🧬 Highlights of My Work
 
-### 🧬 What I’ve Explored
+### 1. **Single-cell RNA-seq (scRNA-seq) Analysis**
 
-- **Single-cell RNA-seq analysis (scRNA-seq)** of the retina and anterior eye  
-  I primarily **re-analyzed public scRNA-seq datasets**, which was a fantastic way to **gain hands-on experience and deepen my understanding** of the analysis workflow. These datasets also allowed me to **validate my findings**. In particular, I worked with the dataset from **Fadl et al.2020**  
+I re-analyzed retinal single-cell transcriptomic datasets, including one from [Fadl et al., 2020](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE153674), using 10X Genomics data.  
+This process helped me gain experience in preprocessing, clustering, annotation, and visualization using **Seurat**.
+
+### 🔎 UMAP of Retina Cells After Filtering
 
 <p align="center">
-  <img src="figures/umap_retina.png" alt="UMAP of scRNA retina data" width="45%"/>
-  <img src="figures/deconv_ev.png" alt="Deconvolution of EV proteomics data" width="45%"/>
+  <img src="figures/Rplot05.png" alt="UMAP of filtered retina scRNA-seq data" width="55%">
+</p>
+<p align="center">
+  <em>Cells with &lt;200 detected genes or &gt;20% mitochondrial content were excluded.</em>
 </p>
 
-- **Proteomics-based deconvolution**  
-  - Built a **cellular reference matrix** from scRNA-seq cell types  
-  - Traditional deconvolution methods are usually applied to **bulk transcriptomics data**, but I adapted a **proteomics-based approach** inspired by [Newman et al., 2015](https://doi.org/10.1038/nmeth.3337) using the **SVR method**  
-  - Applied this to **extracellular vesicle (EV) proteomics data** to estimate contributions of different retinal cell populations  
-  - This strategy addresses the **challenge of isolating EVs by cell type experimentally**, providing a computational solution to dissect cellular contributions
+This UMAP visualization highlights major retinal cell types identified after quality control filtering, normalization, PCA, and clustering (40 principal components).  
+Cell types were annotated based on known marker genes.
+
+---
+
+### 2. **Proteomics-Based Deconvolution**
+
+- Constructed a reference matrix from single-cell transcriptomic data  
+- Adapted **support vector regression (SVR)**-based deconvolution (inspired by [Newman et al., 2015](https://doi.org/10.1038/nmeth.3337))  
+- Applied this to **extracellular vesicle (EV) proteomics** to estimate contributions of retinal cell types from[Cioanca et al.,2023](https://doi.org/10.1002/jev2.12393)
+- This approach offers a computational strategy for characterizing the cellular origin of EVs, which are otherwise difficult to isolate by cell type experimentally
+
+### 📊 Estimated Cell Type Contributions in EV Proteomics
+
+<p align="center">
+  <img src="figures/Rplot04.png" alt="Proteomics-based deconvolution of EVs" width="55%">
+</p>
+<p align="center">
+  <em>Estimated cell-type contributions in retinal EV proteomics using SVR-based deconvolution. Control(Dim-reared retina (DR) and PD(Photo oxidative damage model)  Contributions are higher in Muller glia in PD samples </em>
+</p>
+
+---
+
+## 🛠️ Skills & Tools  
+
+- R programming (Seurat, ggplot2, dplyr, SVR modeling)  
+- Single-cell RNA-seq preprocessing, clustering, and annotation  
+- Data visualization and QC interpretation  
+- Adapting transcriptomic workflows to proteomic data  
+- Clear and reproducible reporting of results  
+
+---
+
+## 📫 Connect with Me  
+
+I'm open to collaboration or conversation around bioinformatics workflows, omics integration, or research in neurodegeneration.  
+Feel free to connect with me on [LinkedIn](https://www.linkedin.com) or reach out via email.
+
+---
+
