@@ -21,9 +21,9 @@ As research becomes increasingly **omics data driven**, I’ve been particularly
 
 ## 🔬 Current Research Focus  
 
-My recent work focuses on understanding **retinal cell extracellular vesicles (EV) communication and degeneration in glaucoma**, through analysis of **transcriptomic and proteomic** data.
+My recent work focuses on understanding **retinal cell extracellular vesicles (EV) communication and degeneration in glaucoma**, through analysis of **transcriptomic and proteomic** data.EVs are critical mediators of cell-to-cell communication, transferring proteins, lipids, and nucleic acids that modulate physiological and pathological processes in recipient cells
 
-EVs are critical mediators of cell-to-cell communication, transferring proteins, lipids, and nucleic acids that modulate physiological and pathological processes in recipient cells
+
 ---
 
 ## 🧬 Highlights of My Work
