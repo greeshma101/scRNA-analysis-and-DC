@@ -8,7 +8,7 @@
 ## 📘 My Research Journey  
 
 My academic background began with a strong foundation in **statistics**, developed during my Master’s degree in biology.  
-Through coursework and hands-on practice using **RStudio**, I became expereinced in:
+Through coursework and hands-on practice using **RStudio**, I became experienced in:
 - Principal Component Analysis (PCA)  
 - Mixed linear models  
 - Regression techniques  
@@ -38,11 +38,9 @@ This process helped me gain experience in preprocessing, clustering, annotation,
   <img src="figures/Rplot05.png" alt="UMAP of filtered retina scRNA-seq data" width="55%">
 </p>
 <p align="center">
-  <em>Cells with &lt;200 detected genes or &gt;20% mitochondrial content were excluded.</em>
+  <em>Cells with &lt;200 detected genes or &gt;20% mitochondrial content were excluded.Clustering was performed at resolution 0.8</em>
 </p>
 
-This UMAP visualization highlights major retinal cell types identified after quality control filtering, normalization, PCA, and clustering (40 principal components).  
-Cell types were annotated based on known marker genes.
 
 ---
 
