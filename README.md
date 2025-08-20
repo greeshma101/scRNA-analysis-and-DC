@@ -1,6 +1,6 @@
 # 👋 Hi, I'm Greeshma Gopinath
 
-🎓 Aspiring PhD researcher in **bioinformatics,molecualar biology and omics**  
+🎓 Aspiring PhD researcher in **bioinformatics, molecualar biology and omics**  
 🔬 Currently Investigating **cell-to-cell communication in glaucoma** using **scRNA-seq and proteomics**  
 
 ---
@@ -13,15 +13,15 @@ Through coursework and hands-on practice using **RStudio**, I became experienced
 - Mixed linear models  
 - Regression techniques  
 
-This experience helped me realize just how deep statistical methods run in biology,and how critical they are for navigating its complexity and variability in some biological aspects.
+This experience helped me realize just how deep statistical methods run in biology, and how critical they are for navigating its complexity and variability in some biological aspects.
 
-As research becomes increasingly **omics data driven**, I’ve been particularly motivated by the potential of high-throughput datasets to reveal cellular-level mechanisms. This has driven me to independently explore and apply computational workflows to publicly available biological datasets.
+As research becomes increasingly **omics data driven**, I’ve been particularly motivated by the potential of high-throughput datasets to reveal cellular-level mechanisms. This has driven me to independently explore and apply computational workflows.
 
 ---
 
 ## 🔬 Current Research Focus  
 
-My recent work focuses on understanding **retinal cell extracellular vesicles (EV) communication and degeneration in glaucoma**, through analysis of **transcriptomic and proteomic** data.EVs are critical mediators of cell-to-cell communication, transferring proteins, lipids, and nucleic acids that modulate physiological and pathological processes in recipient cells
+My recent work focuses on understanding **retinal cell extracellular vesicles (EV) communication and degeneration in glaucoma**, through analysis of **transcriptomic and proteomic** data. EVs are critical mediators of cell-to-cell communication, transferring proteins, lipids, and nucleic acids that modulate physiological and pathological processes in recipient cells.
 
 
 ---
@@ -30,8 +30,7 @@ My recent work focuses on understanding **retinal cell extracellular vesicles (E
 
 ### 1. **Single-cell RNA-seq (scRNA-seq) Analysis of mouse retina**
 
-I re-analyzed retinal single-cell transcriptomic datasets, including one from [Fadl et al., 2020](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE153674), using 10X Genomics data.  
-This process helped me gain experience in preprocessing, clustering, annotation, and visualization using **Seurat**.
+I re-analyzed retinal single-cell transcriptomic datasets, including one from [Fadl et al., 2020](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE153674), using 10X Genomics data. This process helped me gain experience in preprocessing, clustering, annotation, and visualization using **Seurat**.
 
 ### 🔎 UMAP of Retina Cells After Filtering
 
@@ -39,7 +38,7 @@ This process helped me gain experience in preprocessing, clustering, annotation,
   <img src="figures/Rplot05.png" alt="UMAP of filtered retina scRNA-seq data" width="55%">
 </p>
 <p align="center">
-  <em>Cells with &lt;200 detected genes or &gt;20% mitochondrial content were excluded.Clustering was performed at resolution 0.8</em>
+  <em>Cells with &lt;200 detected genes or &gt;20% mitochondrial content were excluded. Clustering was performed at resolution 0.8</em>
 </p>
 
 
